@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+          Text Prediction
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">The text '{{text}}'</h5>
+          {%if prediction == "Positif"%}
+          <div class="alert alert-success w-50px" role="alert">
+              <p>Is classify as {{prediction}}</p>
+          </div>
+          {%else%}
+          <div class="alert alert-danger" role="alert">
+              <p>Is classify as {{prediction}}</p>
+            </div>
+          {%endif%}
+          <a href="{{ url_for('home')}}" class="btn btn-primary">Go Home</a>
+        </div>
+      </div>   
+        
+</body>
+</html>

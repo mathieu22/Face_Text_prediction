@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid w-100">
+        <div class="card mx-auto" style="width:18rem;">
+            <img src={{ url_for("static", filename ="uploads/"+source) }} class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Face Prediction</h5>
+              <p>Your image is classify as {{prediction}}</p>
+              <a href="{{ url_for('home')}}" class="btn btn-primary">Go Home</a>
+            </div>
+          </div>
+    </div>
+  
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
